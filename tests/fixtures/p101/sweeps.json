@@ -1,0 +1,4 @@
+{
+  "replacement_interval": [3500, 4000, 5000],
+  "inspection_interval": [500, 750]
+}

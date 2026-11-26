@@ -1,0 +1,123 @@
+{
+  "contract_version": 4,
+  "ncr_ref": "NCR-104",
+  "site": "DEMO_MINE_A",
+  "part_number": "DEMO-P101-DE-BEARING",
+  "part_number_verbatim": "DEMO-P101-DE-BEARING",
+  "part_revision": null,
+  "production_wo": null,
+  "production_wo_verbatim": null,
+  "lot_number": null,
+  "lot_number_verbatim": null,
+  "operation": null,
+  "found_by": "Demo Operator",
+  "found_at": "2026-10-15T10:00:00Z",
+  "disposition_pending": true,
+  "condition_found": "Synthetic case. P101 drive-end bearing temperature reached 94 degrees C as the pump stopped. Cause remains open.",
+  "measurements": [
+    {
+      "characteristic": "Drive-end bearing temperature",
+      "measured": "94",
+      "nominal": null,
+      "tolerance": "80 max",
+      "uom": "deg C",
+      "gage": "TAG-234-DE-TEMP",
+      "source_ref": "DEMO_MINE.OPS.SAMPLES: TAG-234-DE-TEMP at 2026-10-15T10:00:00Z"
+    }
+  ],
+  "is_subjective": false,
+  "qty_found": 1,
+  "qty_found_reason": null,
+  "uom": "each",
+  "requirement_cited": {
+    "source": "Synthetic engineering specification",
+    "document": "DEMO-SPEC-01",
+    "locator": "Section 3",
+    "characteristic": "Drive-end bearing temperature",
+    "stated_value": "80 deg C max"
+  },
+  "requirement_not_locatable": false,
+  "qty_suspect": 1,
+  "qty_suspect_is_minimum": true,
+  "scope_basis": "widened_incomplete_traceability",
+  "scope_reasoning": "The observed bearing is in scope. Missing material and lot records leave the wider scope unresolved.",
+  "traceability_complete": false,
+  "containment": [
+    {
+      "location": "wip_at_machine",
+      "qty": 1,
+      "uom": "each",
+      "checked": false,
+      "action": "Verify P101 isolation and confirm the bearing location before inspection.",
+      "urgency": "immediate",
+      "owner": null,
+      "customer": null,
+      "source_ref": "Synthetic NCR-104 fixture. Containment verification pending."
+    },
+    {
+      "location": "finished_goods",
+      "qty": 0,
+      "uom": "each",
+      "checked": false,
+      "action": "Check whether related stock can be identified once lot traceability is established.",
+      "urgency": "routine",
+      "owner": null,
+      "customer": null,
+      "source_ref": "Synthetic NCR-104 fixture. Containment verification pending."
+    },
+    {
+      "location": "in_transit",
+      "qty": 0,
+      "uom": "each",
+      "checked": false,
+      "action": "Check dispatch history if related lot records are recovered.",
+      "urgency": "routine",
+      "owner": null,
+      "customer": null,
+      "source_ref": "Synthetic NCR-104 fixture. Containment verification pending."
+    },
+    {
+      "location": "at_customer",
+      "qty": 0,
+      "uom": "each",
+      "checked": false,
+      "action": "Review customer exposure if shipment evidence is found.",
+      "urgency": "routine",
+      "owner": null,
+      "customer": null,
+      "source_ref": "Synthetic NCR-104 fixture. Containment verification pending."
+    },
+    {
+      "location": "installed_at_customer",
+      "qty": 0,
+      "uom": "each",
+      "checked": false,
+      "action": "Review installation records if customer exposure is found.",
+      "urgency": "routine",
+      "owner": null,
+      "customer": null,
+      "source_ref": "Synthetic NCR-104 fixture. Containment verification pending."
+    }
+  ],
+  "recurrence": "no_searchable_history",
+  "prior_ncrs_found": 1,
+  "related_records": [
+    {
+      "ref": "DEMO-NCR-P101-PRIOR",
+      "date": "2026-09-01",
+      "what_matched": "Same pump and bearing issue. Prior NCR closed after bearing replacement. Effectiveness verification unavailable.",
+      "fix_held": null
+    }
+  ],
+  "history_searched": true,
+  "escape_occurred": false,
+  "escape_possible": false,
+  "verify_shipment_action": null,
+  "escape_detected_at": null,
+  "notification_drafted": false,
+  "notification_deadline": null,
+  "affected_customers": [],
+  "approval_state": "draft",
+  "approved_by": null,
+  "approved_at": null
+}

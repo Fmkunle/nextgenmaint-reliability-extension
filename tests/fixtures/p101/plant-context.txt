@@ -1,0 +1,25 @@
+## Plant context
+
+- **Profile version:** 2
+- **Company:** DEMO_MINE_A
+- **Timezone:** Australia/Perth
+- **Shift pattern:** not supplied for this synthetic case
+- **Production day starts:** not supplied
+- **Cross-midnight shift belongs to:** not supplied
+
+Synthetic P101 handoff fixture. Source timezone declarations describe the fixture records. A clock alignment result requires the same stop event in both sources.
+
+### Source clocks
+
+| Source | Timezone | Zone-aware | Observed skew | Checked |
+|---|---|---|---|---|
+| MES downtime export | UTC | yes, +00:00 | not checked | — |
+| Historian export | UTC | yes, +00:00 | not checked | — |
+| CMMS export | UTC | yes, +00:00 for `as_of`; completion dates are date-only | not checked | — |
+| Quality NCR fixture | UTC | yes, +00:00 | not checked | — |
+
+The downtime workbook records the P101 stop at 2026-10-15T10:00:00Z. The historian readings include a sample at that time. A matching timestamp on a sample provides no independent stop marker.
+
+### Site: DEMO_MINE_A (default)
+
+- **Timezone:** Australia/Perth

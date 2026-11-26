@@ -1,0 +1,11 @@
+{
+  "synthetic": true,
+  "source_system": "historian_export",
+  "source_ref": "DEMO-HISTORIAN:STOP-P101-20261015",
+  "event_id": "DEMO-STOP-P101",
+  "site": "DEMO_MINE_A",
+  "asset_id": "0000100234",
+  "plant_tag": "P101",
+  "event_type": "pump_stop",
+  "timestamp_utc": "2026-10-15T10:00:00Z"
+}

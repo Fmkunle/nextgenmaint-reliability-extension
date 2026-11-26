@@ -1,0 +1,55 @@
+{
+  "synthetic": true,
+  "scenario_id": "DEMO-P101-FLEET-10Y",
+  "source_reference": "REFERENCE_CASE.md#economic-comparison-for-the-calculation-stage",
+  "cost_basis_reference": "DEMO-COST-ASSUMPTIONS-01",
+  "lifetime_fixture": "bearing-lives-demo.json",
+  "fleet": {
+    "part_number": "DEMO-BEARING-D1",
+    "duty_group": "D1",
+    "starting_age_groups": [
+      { "age_operating_hours": 0, "bearing_count": 5 },
+      { "age_operating_hours": 1500, "bearing_count": 5 },
+      { "age_operating_hours": 3000, "bearing_count": 5 },
+      { "age_operating_hours": 4500, "bearing_count": 5 }
+    ],
+    "scheduled_operating_hours_per_year": 6000,
+    "operating_schedule": "Uniform exposure over each model year. Event downtime is measured in scheduled operating hours and pauses bearing ageing."
+  },
+  "simulation": {
+    "horizon_years": 10,
+    "replications": 5000,
+    "random_seed": 104,
+    "real_discount_rate_per_year": 0.07,
+    "common_random_numbers_across_strategies": true
+  },
+  "strategies": {
+    "run_to_failure": {},
+    "current_practice": { "replace_at_operating_hours": 6000 },
+    "scheduled_replacement": { "replace_at_operating_hours": 4000 },
+    "condition_based_inspection": {
+      "interval_operating_hours": 500,
+      "pf_interval_operating_hours": 750,
+      "detection_probability_per_inspection_during_pf_interval": 0.8,
+      "intervention_lead_operating_hours": 100
+    }
+  },
+  "consequences": {
+    "currency": "AUD",
+    "lost_production_value_per_downtime_hour": 500,
+    "failure_replacement": { "direct_cost_per_event": 4000, "downtime_operating_hours": 12 },
+    "scheduled_replacement": { "direct_cost_per_event": 1000, "downtime_operating_hours": 2 },
+    "inspection": { "direct_cost_per_event": 250, "downtime_operating_hours": 0 },
+    "inspection_triggered_replacement": { "direct_cost_per_event": 1500, "downtime_operating_hours": 3 }
+  },
+  "assumptions": {
+    "replacement_restores_as_new_after_each_replacement": true,
+    "successive_lives_independent_and_identically_distributed": true,
+    "same_fitted_life_distribution_for_all_strategies": true,
+    "cost_and_duty_stationary": true,
+    "inspection_detection_trials_independent_given_detectable_deterioration": true,
+    "false_positive_probability": 0,
+    "inspection_schedule_basis": "First inspection one full interval after simulation start or replacement. A detected defect prevents the failure only if intervention completes before the simulated failure.",
+    "cost_basis": "Direct costs exclude production loss. The demo splits the reference failure and scheduled replacement totals into direct cost and downtime loss. Fleet, inspection, and discount inputs are synthetic scenario assumptions."
+  }
+}

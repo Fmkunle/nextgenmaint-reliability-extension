@@ -1,0 +1,35 @@
+{
+  "synthetic": true,
+  "source_system": "cmms",
+  "source_ref": "DEMO-CMMS-CV207-WORK-HISTORY",
+  "coverage": {
+    "from": "2026-11-01T00:00:00+08:00",
+    "through": "2026-11-25T12:00:00+08:00",
+    "scope": "Selected work orders for CV207. Completeness of work history is unverified."
+  },
+  "work_orders": [
+    {
+      "site": "DEMO_MINE_C",
+      "asset_id": "0000300207",
+      "asset_tag": "CV207",
+      "maintenance_wo": "DEMO-WO-5201",
+      "reported_at": "2026-11-04T09:15:00+08:00",
+      "reported_symptom": "Operator reported the conveyor stopped on a belt drift indication during loading.",
+      "status": "closed",
+      "completed_at": "2026-11-04T14:30:00+08:00",
+      "close_out_text": "Replaced the left-side belt drift switch. Conveyor restarted. As-found switch condition and belt position were not recorded."
+    },
+    {
+      "site": "DEMO_MINE_C",
+      "asset_id": "0000300207",
+      "asset_tag": "CV207",
+      "maintenance_wo": "DEMO-WO-5248",
+      "event_id": "DEMO-STOP-CV207-20261124",
+      "reported_at": "2026-11-24T10:20:00+08:00",
+      "reported_symptom": "Operator reported another stop on a belt drift indication during loading.",
+      "status": "open",
+      "completed_at": null,
+      "close_out_text": null
+    }
+  ]
+}

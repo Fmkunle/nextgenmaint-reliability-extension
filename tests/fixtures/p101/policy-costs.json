@@ -1,0 +1,25 @@
+{
+  "synthetic": true,
+  "source_reference": "REFERENCE_CASE.md#economic-comparison-for-the-calculation-stage",
+  "cost_basis_reference": "DEMO-COST-ASSUMPTIONS-01",
+  "part_number": "DEMO-BEARING-D1",
+  "duty_group": "D1",
+  "model": "steady_state_age_replacement",
+  "policies": {
+    "baseline": { "replace_at_operating_hours": 6000 },
+    "candidate": { "replace_at_operating_hours": 4000 }
+  },
+  "currency": "AUD",
+  "planned_replacement_cost_per_event": 2000,
+  "failure_replacement_cost_per_event": 10000,
+  "operating_hours_per_year": 6000,
+  "assumptions": {
+    "replace_on_failure_before_scheduled_age": true,
+    "replacement_restores_as_new_after_either_outcome": true,
+    "successive_lives_independent_and_identically_distributed": true,
+    "cost_and_duty_stationary": true,
+    "same_life_distribution_for_both_policies": true,
+    "event_costs_include_production_impact": true,
+    "planned_and_failure_costs_are_mutually_exclusive": true
+  }
+}
